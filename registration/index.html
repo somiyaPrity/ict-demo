@@ -116,153 +116,195 @@
 
       <section class="mt-5">
         <div class="container bg-white">
-          <div class="pt-4">
-            <h5 class="ms-3">রেজিস্ট্রেশন</h5>
-            <hr />
+          <div class="alert alert-success d-none" role="alert">
+            Successfully submitted.
           </div>
-          <div class="bg-white p-3">
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >আবেদনকারীর নাম *</label
+          <form action="">
+            <div class="pt-4">
+              <h5 class="ms-3">রেজিস্ট্রেশন</h5>
+              <hr />
+            </div>
+            <div class="bg-white p-3">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >আবেদনকারীর নাম *</label
+                >
+                <input
+                  type="text"
+                  class="form-control name"
+                  id="exampleFormControlInput1"
+                  placeholder="আপনার নাম লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="name-error-mgs text-danger invalid-feedback">
+                  Name should be 3 characters.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >আবেদনকারীর বাবার নাম *</label
+                >
+                <input
+                  type="text"
+                  class="form-control father-name"
+                  id="exampleFormControlInput1"
+                  placeholder="আপনার বাবার নাম লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="fathername-error-mgs text-danger invalid-feedback">
+                  Father's name should be 3 characters.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >আবেদনকারীর মায়ের নাম *</label
+                >
+                <input
+                  type="text"
+                  class="form-control mother-name"
+                  id="exampleFormControlInput1"
+                  placeholder="আপনার মায়ের নাম লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="mothername-error-mgs text-danger invalid-feedback">
+                  Mothers's name should be 3 characters.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >আবেদনকারীর ঠিকানা *</label
+                >
+                <input
+                  type="text"
+                  class="form-control address"
+                  id="exampleFormControlInput1"
+                  placeholder="আপনার ঠিকানা লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="address-error-mgs text-danger invalid-feedback">
+                  Please provide a valid address.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >NID *</label
+                >
+                <input
+                  type="text"
+                  class="form-control nid"
+                  id="exampleFormControlInput1"
+                  placeholder="NID"
+                />
+                <div id="validationServerUsernameFeedback" class="nid-error-mgs text-danger invalid-feedback">
+                  Please provide a valid NID number.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >সংস্থা/প্রতিষ্ঠানের নাম *</label
+                >
+                <input
+                  type="text"
+                  class="form-control organization-name"
+                  id="exampleFormControlInput1"
+                  placeholder="সংস্থা/প্রতিষ্ঠানের নাম লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="organization-name-error-mgs text-danger invalid-feedback">
+                  Please provide a valid name of organization.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >সংস্থা/প্রতিষ্ঠানের ঠিকানা *</label
+                >
+                <input
+                  type="text"
+                  class="form-control organization-address"
+                  id="exampleFormControlInput1"
+                  placeholder="সংস্থা/প্রতিষ্ঠানের ঠিকানা লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="organization-address-error-mgs text-danger invalid-feedback">
+                  Please provide a valid address of organization.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Trade License No. *</label
+                >
+                <input
+                  type="password"
+                  class="form-control license-no"
+                  id="exampleFormControlInput1"
+                />
+                <div id="validationServerUsernameFeedback" class="license-error-mgs text-danger invalid-feedback">
+                  Please provide a valid license number.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >TIN No. *</label
+                >
+                <input
+                  type="password"
+                  class="form-control tin-no"
+                  id="exampleFormControlInput1"
+                />
+                <div id="validationServerUsernameFeedback" class="tin-error-mgs text-danger invalid-feedback">
+                  Please provide a valid TIN number.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >সংস্থা/প্রতিষ্ঠানের ব্যাংকের নাম *</label
+                >
+                <input
+                  type="text"
+                  class="form-control bank-name"
+                  id="exampleFormControlInput1"
+                  placeholder="সংস্থা/প্রতিষ্ঠানের ব্যাংকের নাম লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="bank-error-mgs text-danger invalid-feedback">
+                  Please provide a valid bank name of organization.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >সংস্থা/প্রতিষ্ঠানের আয়ের উৎস *</label
+                >
+                <input
+                  type="text"
+                  class="form-control soi"
+                  id="exampleFormControlInput1"
+                  placeholder="সংস্থা/প্রতিষ্ঠানের আয়ের উৎস লিখুন"
+                />
+                <div id="validationServerUsernameFeedback" class="soi-error-mgs text-danger invalid-feedback">
+                  Please provide a valid source of income of organization.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >সংস্থা/প্রতিষ্ঠানের সেবা</label
+                >
+                <textarea
+                  class="form-control service"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+                <div id="validationServerUsernameFeedback" class="service-error-mgs text-danger invalid-feedback">
+                  Please provide a valid service name.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label">Attach File</label>
+                <input class="form-control" type="file" id="formFile" />
+              </div>
+              <button
+                class="btn btn-primary mb-3"
+                id="submit-form"
+                style="background-color: #5c6bc0"
+                type="button"
               >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="আপনার নাম লিখুন"
-              />
+                একাউন্ট তৈরী করুন
+              </button>
+              <br />
             </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >আবেদনকারীর বাবার নাম *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="আপনার বাবার নাম লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >আবেদনকারীর মায়ের নাম *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="আপনার মায়ের নাম লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >আবেদনকারীর ঠিকানা *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="আপনার ঠিকানা লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >NID *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="NID"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >সংস্থা/প্রতিষ্ঠানের নাম *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="সংস্থা/প্রতিষ্ঠানের নাম লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >সংস্থা/প্রতিষ্ঠানের ঠিকানা *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="সংস্থা/প্রতিষ্ঠানের ঠিকানা লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >Trade License No. *</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="exampleFormControlInput1"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >TIN No. *</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="exampleFormControlInput1"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >সংস্থা/প্রতিষ্ঠানের ব্যাংকের নাম *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="সংস্থা/প্রতিষ্ঠানের ব্যাংকের নাম লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >সংস্থা/প্রতিষ্ঠানের আয়ের উৎস *</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="সংস্থা/প্রতিষ্ঠানের আয়ের উৎস লিখুন"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
-                >সংস্থা/প্রতিষ্ঠানের সেবা</label
-              >
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="3"
-              ></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="formFile" class="form-label">Attach File</label>
-              <input class="form-control" type="file" id="formFile" />
-            </div>
-            <button
-              class="btn btn-primary mb-3"
-              style="background-color: #5c6bc0"
-              type="button"
-            >
-              একাউন্ট তৈরী করুন
-            </button>
-            <br />
-          </div>
+          </form>
         </div>
       </section>
     </main>
@@ -319,5 +361,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
