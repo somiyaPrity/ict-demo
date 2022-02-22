@@ -16,7 +16,7 @@
 // })
 
 //form validation
-
+let validationMgs;
 function formValidation(){
   let name = document.querySelector('.name').value;
   let fatherName = document.querySelector('.father-name').value;
@@ -30,7 +30,7 @@ function formValidation(){
   let bankName = document.querySelector('.bank-name').value;
   let soi = document.querySelector('.soi').value;
   let service = document.querySelector('.service').value;
-  let validationMgs;
+  
   if(name.length<3){
     validationMgs = document.querySelector('.name-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
@@ -95,11 +95,11 @@ document.getElementById('submit-form').addEventListener('click',(e)=>{
   e.preventDefault();
   // console.log("clicked");
   if(!formValidation()){
-    validationMgs.classList.add('invalid-feedback');
     return false;
   }
-  // console.log("Seuccessfully submitted");
-  validationMgs.classList.add('invalid-feedback');
+  if(validationMgs!=undefined){
+    validationMgs.classList.add('invalid-feedback');
+  }
   let seccessMgs = document.querySelector('.alert');
   seccessMgs.classList.remove('d-none');
 })
