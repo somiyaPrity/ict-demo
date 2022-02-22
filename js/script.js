@@ -30,59 +30,59 @@ function formValidation(){
   let bankName = document.querySelector('.bank-name').value;
   let soi = document.querySelector('.soi').value;
   let service = document.querySelector('.service').value;
-
+  let validationMgs;
   if(name.length<3){
-    let validationMgs = document.querySelector('.name-error-mgs');
+    validationMgs = document.querySelector('.name-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(fatherName.length<3){
-    let validationMgs = document.querySelector('.fathername-error-mgs');
+    validationMgs = document.querySelector('.fathername-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(motherName.length<3){
-    let validationMgs = document.querySelector('.mothername-error-mgs');
+    validationMgs = document.querySelector('.mothername-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(address.length<10){
-    let validationMgs = document.querySelector('.address-error-mgs');
+    validationMgs = document.querySelector('.address-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(nid.length<8){
-    let validationMgs = document.querySelector('.nid-error-mgs');
+    validationMgs = document.querySelector('.nid-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(organizationAddress.length<5){
-    let validationMgs = document.querySelector('.organization-address-error-mgs');
+    validationMgs = document.querySelector('.organization-address-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(licenseNo.length<5){
-    let validationMgs = document.querySelector('.license-error-mgs');
+    validationMgs = document.querySelector('.license-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(tinNo.length<5){
-    let validationMgs = document.querySelector('.tin-error-mgs');
+    validationMgs = document.querySelector('.tin-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(bankName.length<5){
-    let validationMgs = document.querySelector('.bank-error-mgs');
+    validationMgs = document.querySelector('.bank-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(soi.length<3){
-    let validationMgs = document.querySelector('.soi-error-mgs');
+    validationMgs = document.querySelector('.soi-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
   if(service.length<3){
-    let validationMgs = document.querySelector('.service-error-mgs');
+    validationMgs = document.querySelector('.service-error-mgs');
     validationMgs.classList.remove('invalid-feedback');
     return false;
   }
@@ -95,9 +95,11 @@ document.getElementById('submit-form').addEventListener('click',(e)=>{
   e.preventDefault();
   // console.log("clicked");
   if(!formValidation()){
+    validationMgs.classList.add('invalid-feedback');
     return false;
   }
   // console.log("Seuccessfully submitted");
+  validationMgs.classList.add('invalid-feedback');
   let seccessMgs = document.querySelector('.alert');
   seccessMgs.classList.remove('d-none');
 })
