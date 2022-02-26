@@ -60,7 +60,7 @@
                 <a class="nav-link" href="#">নীতিমালা</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../login/index.html">লগইন</a>
+                <a class="nav-link" href="./index.html">লগইন</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../registration/index.php">নিবন্ধন</a>
@@ -98,14 +98,6 @@
                 <a class="nav-link" href="#">English</a>
               </li>
             </ul>
-            <!-- <a class="navbar-brand ms-4" href="#">
-              <img
-                class="header-logo"
-                src="./images/digital-bangladesh.jpg"
-                alt=""
-                srcset=""
-              />
-            </a> -->
           </div>
         </div>
       </nav>
@@ -113,31 +105,46 @@
     <!-- main part -->
     <main>
       <section class="container">
-        <div class="row mt-5">
-          <div class="col-md-12 mt-2 mb-5">
-            <img class="img-fluid" src="../images/nitimala.JPEG" alt="" />
-          </div>
-          <div class="col-md-12 mb-5">
-            <img
-              class="img-fluid"
-              src="../images/shamojjosho-bishoy1.jpeg"
-              alt=""
-              srcset=""
+        <div class="login-form bg-white p-5 mt-5 mb-5">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >ই-মেইল এড্রেস *</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="আপনার ই-মেইল লিখুন"
             />
           </div>
-          <div class="col-md-12 mb-5">
-            <img
-              class="img-fluid"
-              src="../images/shamojjosho-bishoy2.jpeg"
-              alt=""
-              srcset=""
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >পাসওয়ার্ড *</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="আপনার পাসওয়ার্ড লিখুন"
             />
           </div>
+          <button
+            class="btn btn-primary mb-3"
+            style="background-color: #5c6bc0"
+            type="button"
+          >
+            লগইন
+          </button>
+          <br />
+          <a href="#">পাসওয়ার্ড ভুলে গেছেন?</a>
+          &nbsp;|&nbsp;
+
+          <a href="#">ভেরিফিকেশন ইমেইল পুনরায় পাঠান</a>
         </div>
       </section>
     </main>
 
-    <footer style="background-color: #333; padding: 12px 0">
+    <footer style="background-color: #333; padding: 12px 0; margin-top: 100px">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a
@@ -145,7 +152,7 @@
             href="#"
             style="color: rgba(255, 255, 255, 0.5); font-size: 16px"
           >
-            Rek Technology © ২০২২
+            Rek Technology © ২০২২ © ২০২২
           </a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">

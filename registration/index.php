@@ -63,7 +63,7 @@
                 <a class="nav-link" href="#">লগইন</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">নিবন্ধন</a>
+                <a class="nav-link" href="./index.php">নিবন্ধন</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">নোটিশ বোর্ড</a>
@@ -114,12 +114,12 @@
     <main>
       <!-- registration form -->
 
-      <section class="mt-5">
+      <section class="mt-5 mb-5">
         <div class="container bg-white">
           <div class="alert alert-success d-none" role="alert">
             Successfully submitted.
           </div>
-          <form action="">
+          <form method="POST" action="insert.php">
             <div class="pt-4">
               <h5 class="ms-3">রেজিস্ট্রেশন</h5>
               <hr />
@@ -131,11 +131,15 @@
                 >
                 <input
                   type="text"
+                  name="petitionerName"
                   class="form-control name"
                   id="exampleFormControlInput1"
                   placeholder="আপনার নাম লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="name-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="name-error-mgs text-danger invalid-feedback"
+                >
                   Name should be 3 characters.
                 </div>
               </div>
@@ -145,11 +149,15 @@
                 >
                 <input
                   type="text"
+                  name="petitionerFatherName"
                   class="form-control father-name"
                   id="exampleFormControlInput1"
                   placeholder="আপনার বাবার নাম লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="fathername-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="fathername-error-mgs text-danger invalid-feedback"
+                >
                   Father's name should be 3 characters.
                 </div>
               </div>
@@ -159,11 +167,15 @@
                 >
                 <input
                   type="text"
+                  name="petitionerMatherName"
                   class="form-control mother-name"
                   id="exampleFormControlInput1"
                   placeholder="আপনার মায়ের নাম লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="mothername-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="mothername-error-mgs text-danger invalid-feedback"
+                >
                   Mothers's name should be 3 characters.
                 </div>
               </div>
@@ -173,11 +185,15 @@
                 >
                 <input
                   type="text"
+                  name="address"
                   class="form-control address"
                   id="exampleFormControlInput1"
                   placeholder="আপনার ঠিকানা লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="address-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="address-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid address.
                 </div>
               </div>
@@ -187,11 +203,15 @@
                 >
                 <input
                   type="text"
+                  name="nid"
                   class="form-control nid"
                   id="exampleFormControlInput1"
                   placeholder="NID"
                 />
-                <div id="validationServerUsernameFeedback" class="nid-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="nid-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid NID number.
                 </div>
               </div>
@@ -201,11 +221,15 @@
                 >
                 <input
                   type="text"
+                  name="companyName"
                   class="form-control organization-name"
                   id="exampleFormControlInput1"
                   placeholder="সংস্থা/প্রতিষ্ঠানের নাম লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="organization-name-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="organization-name-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid name of organization.
                 </div>
               </div>
@@ -215,11 +239,15 @@
                 >
                 <input
                   type="text"
+                  name="companyAddress"
                   class="form-control organization-address"
                   id="exampleFormControlInput1"
                   placeholder="সংস্থা/প্রতিষ্ঠানের ঠিকানা লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="organization-address-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="organization-address-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid address of organization.
                 </div>
               </div>
@@ -228,11 +256,15 @@
                   >Trade License No. *</label
                 >
                 <input
-                  type="password"
+                  type="text"
+                  name="tradeNo"
                   class="form-control license-no"
                   id="exampleFormControlInput1"
                 />
-                <div id="validationServerUsernameFeedback" class="license-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="license-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid license number.
                 </div>
               </div>
@@ -241,11 +273,15 @@
                   >TIN No. *</label
                 >
                 <input
-                  type="password"
+                  type="text"
+                  name="tin"
                   class="form-control tin-no"
                   id="exampleFormControlInput1"
                 />
-                <div id="validationServerUsernameFeedback" class="tin-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="tin-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid TIN number.
                 </div>
               </div>
@@ -256,10 +292,14 @@
                 <input
                   type="text"
                   class="form-control bank-name"
+                  name="bankName"
                   id="exampleFormControlInput1"
                   placeholder="সংস্থা/প্রতিষ্ঠানের ব্যাংকের নাম লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="bank-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="bank-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid bank name of organization.
                 </div>
               </div>
@@ -271,9 +311,13 @@
                   type="text"
                   class="form-control soi"
                   id="exampleFormControlInput1"
+                  name="incomeSource"
                   placeholder="সংস্থা/প্রতিষ্ঠানের আয়ের উৎস লিখুন"
                 />
-                <div id="validationServerUsernameFeedback" class="soi-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="soi-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid source of income of organization.
                 </div>
               </div>
@@ -285,20 +329,30 @@
                   class="form-control service"
                   id="exampleFormControlTextarea1"
                   rows="3"
+                  name="service"
                 ></textarea>
-                <div id="validationServerUsernameFeedback" class="service-error-mgs text-danger invalid-feedback">
+                <div
+                  id="validationServerUsernameFeedback"
+                  class="service-error-mgs text-danger invalid-feedback"
+                >
                   Please provide a valid service name.
                 </div>
               </div>
               <div class="mb-3">
                 <label for="formFile" class="form-label">Attach File</label>
-                <input class="form-control" type="file" id="formFile" />
+                <input
+                  class="form-control"
+                  name="file"
+                  type="file"
+                  id="formFile"
+                />
               </div>
               <button
                 class="btn btn-primary mb-3"
                 id="submit-form"
                 style="background-color: #5c6bc0"
-                type="button"
+                type="submit"
+                name="submit"
               >
                 একাউন্ট তৈরী করুন
               </button>
@@ -309,7 +363,7 @@
       </section>
     </main>
 
-    <!-- <footer style="background-color: #333; padding: 12px 0">
+    <footer style="background-color: #333; padding: 12px 0">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a
@@ -317,7 +371,7 @@
             href="#"
             style="color: rgba(255, 255, 255, 0.5); font-size: 16px"
           >
-            অনুদান প্রদানের জন্য আহব্বান ব্যবস্থাপনা © ২০২২
+            Rek Technology © ২০২২
           </a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -354,7 +408,7 @@
           </div>
         </div>
       </nav>
-    </footer> -->
+    </footer>
     <!-- bootstrap js link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
